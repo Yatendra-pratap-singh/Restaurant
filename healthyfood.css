@@ -1,0 +1,598 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+    position: fixed;
+    height: 6vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    opacity: 0.85;
+    color: #000;
+    box-shadow:  0px 5px 10px 0px #aaa;
+    z-index: 1;
+    /* border: 2px solid black; */
+}
+.nav-content2{
+    width: 80vw;
+    /* border: 2px solid red */
+}
+.nav-content2 input, .hamburger-lines{  /* for media query use##########*/
+    /* opacity: 0; ni de sakte kioki isse space delete ni hoga*/
+    display: none;
+}
+.nav-content2 .menu-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly   ;
+    /* border: 2px solid red; */
+    list-style: none;
+    padding: 10px 0px 10px 0px;
+}
+.nav-content2 .menu-items li a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #444;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-content2 .menu-items li a:hover{
+    color: tomato;
+}
+/* ..........Section.................... */
+.nav-content3{
+    position: relative;
+}
+.nav-content3 img{
+    height: 45vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+
+}
+.nav-content3 .text-over-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.nav-content3 .text-over-img .item1-over-img{
+    color: #fff;
+    background-color: blue;
+    font-weight: bold;
+}
+.nav-content3 .text-over-img .item2-over-img{
+    font-weight: bold;
+}
+ .btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    margin-top: 1em;
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-primary{
+    color: #fff;
+    background: #16a083;
+}
+/* ################ About us ########################## */
+.sec-container1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #f5f5f7;
+    padding: 60px;
+    /* margin-right: 10px; */
+    /* border: 2px solid black; */
+}
+.sec-container1 .container1{
+    height: 220px;
+    width: 400px;
+    margin-bottom: 30px;
+    transform: translateX(-150%);
+    animation: container1 1s ease-in-out forwards;
+        /* border: 2px solid black; */
+}
+.sec-container .container1 .about{
+    font-size: 1vw;
+    color: #555;
+    font-weight: bold;
+}
+.sec-container .container1 .about1{
+    font-size: 1vw;
+    color: #555;
+    line-height: 2.7vh;
+}
+
+.sec-container .container1 h1{
+    font-size: 2vw;
+    line-height: 6vh;
+}
+.sec-container1 .container2 img{
+    height: 40vh;
+    transform: translateX(150%);
+    animation: container2 1s ease-in-out forwards;
+
+    /* box-shadow: 10px 5px 3px 8px #888888; */
+}
+@keyframes container1{
+    100%{transform: translateX(0);}
+}
+@keyframes container2{
+    100%{transform: translateX(0);}
+}
+/* ################ Types of Food ################### */
+.sec-container2 .heading1{
+    padding: 40px;
+    color: #555;
+}
+.sec-container2 .heading1 P{
+    text-align: center;
+}
+section .food-container{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+.food-container .overlay{
+    position: relative;
+    margin-right: 20px;
+    /* border: 2px solid red; */
+}
+.food-container .container3 img{
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+.food-container .container-overlay{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;/*ab item hidden h*/
+    text-align: center;
+    z-index: 2;
+    transition: all 0.3s ease-in-out 0.1s;
+}
+.container-overlay h3{
+    color: #fff;
+    font-size: 3rem;
+}
+.overlay::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0,0.871);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: all 0.3s ease-in-out;
+}
+.overlay:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+}
+.overlay:hover .container-overlay{
+    opacity: 1;
+    top: 40%;
+}
+.food-container .container4 img{
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+.food-container .container5 img{
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+/* ############# Food menu ####################### */
+.heading2 p{
+    text-align: center;
+    margin-top: 50px;
+    color: #555;
+    text-transform: uppercase;
+    /* font-size: 40px; */
+
+}
+.sec-container3 .container6{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 30px 30px 30px 30px;
+}
+.container6-item1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container6-item1 .container6-item11{
+    margin-left: 10px;
+    text-align: center;
+}
+.menu-item1{
+    color: #444;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.food-text{
+    color: #555 ;
+}
+.price{
+    color: #117964;
+    font-weight: bold;
+}
+.container6-item2 .container6-item22{
+    margin-left: 10px;
+    text-align: center;
+}
+.container7-item1 .container7-item11{
+    margin-left: 10px;
+    text-align: center;
+}
+.container7-item2 .container7-item22{
+    margin-left: 10px;
+    text-align: center;
+}
+.container8-item1 .container8-item11{
+    margin-left: 10px;
+    text-align: center;
+}
+.container8-item2 .container8-item22{
+    margin-left: 10px;
+    text-align: center;
+}
+.container6-item1 img{
+    display: block;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.container6-item2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container6-item2 img{
+    display: block;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.sec-container3 .container7{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 30px 30px 30px 30px;
+}
+.container7-item1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container7-item1 img{
+    display: block;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.container7-item2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container7-item2 img{
+    display: block;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.sec-container3 .container8{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 30px 30px 30px 30px;
+}
+.container8-item1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container8-item1 img{
+    display: block;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.container8-item2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container8-item2 img{
+    display: block;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.customer-view{
+    text-align: center;
+    margin-top: 20px;
+    background: #f5f5f7;
+    padding: 25px 0px 15px 0px;
+    /* border: 2px solid black; */
+}
+.customer-view .heading3{
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+    text-transform: uppercase;
+    /* border: 2px solid black; */
+}
+.customer-view0{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    /* border: 2px solid red; */
+}
+.customer-view .customer-view0 .fa{
+    font-size: 25px;
+}
+.customer-view0 .fa-star{
+    color: orange;
+}
+.customer-view1 .customer-view11 p{
+    margin-top: 1rem;
+    color: #444;
+}
+.customer-view2 .customer-view21 p{
+    margin-top: 1rem;
+    color: #444;
+}
+.customer-view3 .customer-view31 p{
+    margin-top: 1rem;
+    color: #444;
+}
+.customer-view .customer-view1 .customer-view12 img{
+    display: block;
+    margin: 10px 0px 0px 60px;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+.customer-view .customer-view2 .customer-view22 img{
+    display: block;
+    margin: 10px 0px 0px 60px;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+.customer-view .customer-view3 .customer-view32 img{
+    display: block;
+    margin: 10px 0px 0px 60px;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+.customer-view .customer-view1 .customer-view12 p{
+    margin-top: 20px;
+}
+.customer-view .customer-view2 .customer-view22 p{
+    margin-top: 20px;
+}
+.customer-view .customer-view3 .customer-view32 p{
+    margin-top: 20px;
+}
+.contact-us{
+    padding: 3rem 0;
+    background: rgb(226, 226, 226);
+    flex-wrap: wrap;
+    /* border: 2px solid red; */
+}
+.contact-us-item1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact-us-image img{
+    display: block;
+height: 408px;
+width: 450px;
+object-fit: cover;
+object-position: center;
+background-size: cover;
+}
+.contact-us-item2{
+    width: 450px;
+    padding: 10px;
+   background-color: #fff;
+}
+
+.contact-us .contact-us-item2 input{
+    display: block;
+    width: 100%;
+    box-shadow: none;
+    font-weight: 500;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    /* padding: 10px 0; */
+    /* margin-bottom: 10px ; */
+    outline: none;
+    color: #444;
+}
+.contact-us .contact-us-item2 textarea{
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ddd;
+    /* padding: 10px 0; */
+}
+.contact-us .contact-us-item2 h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.footer h2{
+    text-align: center;
+    background-color: rgb(65, 65, 65);
+    font-size: 15px;
+    padding: 3rem;
+    font-weight: 500;
+    color: #fff;
+}
+/* #################### media query ########################## */
+@media (max-width: 768px){
+    html, body{       /*ise hm white space jo aata h sido me use remove krte h*/
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .navbar{
+        opacity: 0.95;
+    }
+    .navbar h2{
+        position: absolute;
+        right: 10px;
+        padding: 10px;
+    }
+    .nav-content2{
+        /* height: 60vh; */
+        /* background: black; */
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* border: 2px solid red; */
+    }
+    .nav-content2 input{
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 20px;
+        height: 40px;
+        width: 32px;
+        opacity: 0;
+        z-index: 5;
+    }
+    .nav-content2 .hamburger-lines{
+        position: absolute;
+        top: 3px;
+        left: 20px;
+        height: 40px;
+        width: 32px;
+        /* background-color: aqua; */
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        background: black;
+        border-radius: 10px;
+    }
+    .nav-content2 .menu-items{
+        height: 100vh;
+        max-width: 300px;
+        background: #fff;
+        flex-direction: column;
+        transform: translate(-110%);
+        transition: all 0.3s ease-in-out;
+        /* border: 2px solid blue; */
+       margin-left: -40px;
+       padding-left: 50px;
+       padding-top: 100px;
+       transition: transform 0.5s ease-in-out;
+       box-shadow: 5px 0px 10px 0px #aaa;
+    }
+    .menu-items li{
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        /* color: white; */
+    }
+    .nav-content2 input[type = "checkbox"]:checked ~ .menu-items{
+        transform: translateX(0);
+        /* background: black; */
+    }
+    /* .nav-content2 input[type = "checkbox"]:checked ~ .hamburger-lines .line{
+        background-color: #fff;
+    } */
+    .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .hamburger-lines .line2{
+       transition: transform 0.4s ease-in-out;
+    }
+    .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .nav-content2 input[type = "checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+    .nav-content2 input[type = "checkbox"]:checked ~ .hamburger-lines .line2{
+        transform: scaleY(0);
+    }
+    .nav-content2 input[type = "checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+
+}
